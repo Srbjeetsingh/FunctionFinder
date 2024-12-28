@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="mapDesign.css" rel="stylesheet"/>
+    <title>Place Search</title>
+</head>
+<body>
+    <h1>Place Search</h1>
+    <div id="controls">
+        <input type="checkbox" class="btn-check" id="restaurant-check" value="restaurant" autocomplete="off">
+        <label class="btn btn-outline-primary" for="restaurant-check">Restaurant</label><br>
+    
+        <input type="checkbox" class="btn-check" id="amusement-park-check" value="amusement_park" autocomplete="off">
+        <label class="btn btn-outline-primary" for="amusement-park-check">Amusement Park</label><br>
+    
+        <input type="checkbox" class="btn-check" id="aquarium-check" value="aquarium" autocomplete="off">
+        <label class="btn btn-outline-primary" for="aquarium-check">Aquarium</label><br>
+    
+        <input type="checkbox" class="btn-check" id="art-gallery-check" value="art_gallery" autocomplete="off">
+        <label class="btn btn-outline-primary" for="art-gallery-check">Art Gallery</label><br>
+    
+        <input type="checkbox" class="btn-check" id="movie-theater-check" value="movie_theater" autocomplete="off">
+        <label class="btn btn-outline-primary" for="movie-theater-check">Movie Theater</label><br>
+    
+        <input type="checkbox" class="btn-check" id="bakery-check" value="bakery" autocomplete="off">
+        <label class="btn btn-outline-primary" for="bakery-check">Bakery</label><br>
+    
+        <input type="checkbox" class="btn-check" id="cafe-check" value="cafe" autocomplete="off">
+        <label class="btn btn-outline-primary" for="cafe-check">Cafe</label><br>
+    
+        <input type="checkbox" class="btn-check" id="zoo-check" value="zoo" autocomplete="off">
+        <label class="btn btn-outline-primary" for="zoo-check">Zoo</label><br>
+    
+        <input type="checkbox" class="btn-check" id="landmark-check" value="landmark" autocomplete="off">
+        <label class="btn btn-outline-primary" for="landmark-check">Landmarks</label><br>
+    </div>
+
+    <div class = "transport">
+        <label for="transportation">Do you have Transportation?</label><br>
+        <input type="radio" name="transportation" id="Tyes" value="yes"> Yes
+        <input type="radio" name="transportation" id="Tno" value="no"> No
+    </div>
+
+    <div class = "age">
+        <label for="age">What is your age?</label><br>
+        <select id="age">
+            <option value="">Select Age</option>
+            <option value="below18">Below 18</option>
+            <option value="18plus">18 Plus</option>
+        </select>
+    </div>
+    <ul id="place-list"></ul>
+    <div id="place-controls" style="margin-top: 20px; display: none;">
+        <button id="plan-btn" class="btn btn-primary">Plan</button>
+        <button id="book-btn" class="btn btn-secondary">Book</button>
+    </div>
+    <script src="mapAPI.js"></script>
+    <script
+        async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY6TshaYS2twQXjN8qO0bw4lPouL4WqoA&libraries=places&callback=initService">
+    </script>
+</body>
+</html>

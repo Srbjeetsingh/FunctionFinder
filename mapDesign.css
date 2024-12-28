@@ -1,0 +1,153 @@
+h1{
+    align-content: center;
+    color: white;
+}
+
+body{
+    background-color: black;
+}
+
+#controls {
+    margin: 10px;
+    display: inline-flex;
+    gap: 10px;
+}
+#controls input {
+    margin-right: 10px;
+}
+#place-list {
+    list-style-type: none;
+    padding: 0;
+}
+.place-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.place-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.place-item .details {
+    flex: 1;
+    color: white;
+}
+
+label[for="restaurant-check"] {
+    background-color: white;
+    color: blue;
+    border-color: blue;
+}
+
+input.btn-check:checked + label[for="restaurant-check"] {
+    background-color: darkblue;
+    border-color: darkblue;
+    color: white;
+}
+
+label[for="amusement-park-check"] {
+    background-color: white;
+    color: green;
+    border-color: green;
+}
+
+input.btn-check:checked + label[for="amusement-park-check"] {
+    background-color: darkgreen;
+    border-color: darkgreen;
+    color: white;
+}
+
+label[for="aquarium-check"] {
+    background-color: white;
+    color: teal;
+    border-color: teal;
+}
+
+input.btn-check:checked + label[for="aquarium-check"] {
+    background-color: darkcyan;
+    border-color: darkcyan;
+    color: white;
+}
+
+label[for="art-gallery-check"] {
+    background-color: white;
+    color: purple;
+    border-color: purple;
+}
+
+input.btn-check:checked + label[for="art-gallery-check"] {
+    background-color: rgb(101, 0, 101);
+    border-color: rgb(101, 0, 101);
+    color: white;
+}
+
+label[for="movie-theater-check"] {
+    background-color: white;
+    color: red;
+    border-color: red;
+}
+
+input.btn-check:checked + label[for="movie-theater-check"] {
+    background-color: darkred;
+    border-color: darkred;
+    color: white;
+}
+
+label[for="bakery-check"] {
+    background-color: white;
+    color: orange;
+    border-color: orange;
+}
+
+input.btn-check:checked + label[for="bakery-check"] {
+    background-color: rgb(151, 98, 0);
+    border-color: rgb(151, 98, 0);
+    color: white;
+}
+
+label[for="cafe-check"] {
+    background-color: white;
+    color: palevioletred;
+    border-color: palevioletred;
+}
+
+input.btn-check:checked + label[for="cafe-check"] {
+    background-color: rgb(181, 71, 108);
+    border-color: rgb(181, 71, 108);
+    color: white;
+}
+
+label[for="zoo-check"] {
+    background-color: white;
+    color: rgb(161, 205, 40);
+    border-color: rgb(161, 205, 40);
+}
+
+input.btn-check:checked + label[for="zoo-check"] {
+    background-color: rgb(131, 170, 22);
+    border-color: rgb(131, 170, 22);
+    color: white;
+}
+
+label[for="landmark-check"] {
+    background-color: white;
+}
+
+.transport{
+    color:white
+}
+
+.age{
+    color: white
+}
+
+.place-item.selected {
+    background-color: rgba(0, 123, 255, 0.1);
+    border-color: #007bff;
+}
