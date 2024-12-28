@@ -12,7 +12,6 @@ function initService() {
 }
 
 function updatePlaceList() {
-    // Clear existing list
     const placeList = document.getElementById("place-list");
     placeList.innerHTML = "";
 
@@ -42,8 +41,6 @@ function updatePlaceList() {
 
 function addPlaceToList(place) {
     const placeList = document.getElementById("place-list");
-
-    // Create list item
     const listItem = document.createElement("li");
     listItem.classList.add("place-item");
 
@@ -59,23 +56,16 @@ function addPlaceToList(place) {
         Address: ${place.vicinity || "N/A"}
     `;
     listItem.appendChild(details);
-
-    // Add click-to-select behavior
     listItem.onclick = () => {
-        // Clear existing selections
         document.querySelectorAll(".place-item").forEach(item => {
             item.classList.remove("selected");
         });
-
-        // Highlight selected item
         listItem.classList.add("selected");
         selectedPlace = {
             name: place.name,
             rating: place.rating || "N/A",
             vicinity: place.vicinity || "N/A"
         };
-
-        // Show control buttons
         const controls = document.getElementById("place-controls");
         controls.style.display = "block";
     };
@@ -83,7 +73,6 @@ function addPlaceToList(place) {
     placeList.appendChild(listItem);
 }
 
-// Add event listeners for Plan and Book buttons
 document.getElementById("plan-btn").onclick = () => {
     if (selectedPlace) {
         localStorage.setItem("selectedPlace", JSON.stringify(selectedPlace));
